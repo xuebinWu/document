@@ -1,8 +1,8 @@
 # 介绍
 
-移动端 为混合开发，借助 APICloud 的 SuperWebviewSDK 实现 web 和原生的交互，并将所有的交互方法，封装在 utils 目录下的 hybrid 文件夹中。web 侧，以 Vue 为技术栈进行开发，主要涉及到的第三方库有 Vuex、vue-router、Vue-n18i、vant、axios 等。原生侧，iOS 为 Objective-C 开发，Android 为 Java 开发。此文档主要介绍 web 侧的开发。
+移动端 为混合开发，借助 APICloud 的 SuperWebviewSDK 实现 web 和原生的交互，并将所有的交互方法，封装在 utils 目录下的 hybrid 文件夹中。web 侧，以 Vue 为技术栈进行开发，主要涉及到的第三方库有 Vuex、vue-router、Vue-n18i、vant、axios 等。原生侧，iOS 为 Objective-C 开发，Android 为 Java 开发。此文档主要介绍 web 侧和web与原生交互的开发。
 
-## 项目文件结构
+## 移动端架构
 
 事实上，一个 VuePress 网站是一个由 [Vue](http://vuejs.org/)、[Vue Router](https://github.com/vuejs/vue-router) 和 [webpack](http://webpack.js.org/) 驱动的单页应用。如果你以前使用过 Vue 的话，当你在开发一个自定义主题的时候，你会感受到非常熟悉的开发体验，你甚至可以使用 Vue DevTools 去调试你的自定义主题。
 

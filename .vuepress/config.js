@@ -5,7 +5,7 @@ module.exports = {
     displayAllHeaders: true,
     nav: [
       { text: "Home", link: "/" },
-      { text: "Guide", link: "/guide/" },
+      { text: "Guide", link: "/mobile/guide/" },
       { text: "ZvUI", link: "http://zvui.lhanyun.com" }
     ],
     sidebar: [
