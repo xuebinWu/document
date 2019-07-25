@@ -12,6 +12,17 @@
 
 ![An image](/jiagou.png)
 
+## 调试
+
+web 模块集成 vconsole 作线上调试
+
+```js
+if (process.env.NODE_ENV !== "production") {
+  let VConsole = require("vconsole/dist/vconsole.min");
+  new VConsole();
+}
+```
+
 ## web UI 组件库
 
 我们在 vant 组件的基础上，封装了一套适用于我们产品的 UI 组件库 [ZvUI](http://zvui.lhanyun.com)，且由专人负责维护。项目的开发者只需要关注已有组件的用法即可，对于组件库暂无的组件，可自行封装。组件的用法与 vant 基本保持一致。在组件库的开发文档上有详细说明，这里不做过多介绍。

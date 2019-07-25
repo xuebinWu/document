@@ -1,58 +1,152 @@
 # 编码规范
 
-## 安全区域适配
+## 一般书写规范
 
-通过 SuperWebviewSDK 提供的方法，来获取到当前设备的安全区域大小（safeArea）。并根据 safeArea 来确定每个 frame 的大小位置，从而适配刘海屏。
+- 普通 JS 文件、目录命名、CSS, SCSS 文件命名，以小写字母命名，多个单词以下划线连接，例如 util.js、util_helper.js
+- 按模块划分文件，每个文件一般都以 index 命名的文件作为入口页面
+- 文件头部、方法、属性必须要有注释
+- 模块文件夹中，必需要有 index 文件，代表入口
+- 当前页面的组件处于同级，新建页面则新开文件夹,例如:
 
-::: warning 注意
-刘海配的适配代码已经封装在 Hybrid 类中，web 开发者不需要关心。当要打开一个新的 frame 时，只需要调用 Hybrid 类中的 openFrame 方法即可。
-:::
-
-```js
-// 将 Hybrid 类实例绑定到Vue上
-const hybrid = new Hybrid();
-Vue.prototype.$h = hybrid.apiCloud;
-
-// 页面中打开一个新的 web 模块
-this.$h.openFrame("name", "url");
+```text
+-home
+--index.vue
+--List.vue
+-detail
+--index.vue
 ```
 
-## 屏幕适配
+- 文件夹的命名，遵循 单驼峰 命名法
+- 使用 name 作为路由跳转的参数，传参如非必要，请使用 params
+- 变量的命名遵循见名知义的原则
+- 组件函数名以 on 开头
+- 组件中尽量少使用 ref，这会破坏组件的封装性
+- 组件文件命名遵循 Pascal 命名法，且组件名的组成最好是大于一个单词。例如 ReservationCard.vue
+- 封装第三方 UI 库组件是，方法和属性命名需与第三方 UI 组件保持一致
+- 封装其他组件时，供父组件使用的函数名已 on 开头
+- 尽量使用 async await 处理异步，js 尽量使用 es6 语法
+- 如果不能保证新创建的页面/组件文件中的选项顺序与规范保持一致，请使用`npm run new`创建文件
+- 使用 Object.freeze()处理 vue big data
+- 在编写 HTML 代码时，需要尽量避免多余的父节点
 
-web 项目使用 vw 布局以适配手机屏幕。这里不多介绍 vw、vh 属性，网上一搜一大把。项目中已经安装了 postcss-px-to-viewport 插件，并在 vue.config.js 中做了相关配置。页面中直接使用 px 单位，项目编译后自动转换为对应的 vw 或 vh 属性。若不想被转换成 vw 或者 vh 属性，使用大写的 PX。
+```html
+<!-- bad -->
+<span class="avatar">
+  <img src="..." />
+</span>
 
-::: warning 注意
-对于 1px 边框，请使用[vant 内置样式](https://youzan.github.io/vant/#/zh-CN/style):
-van-hairline--top、van-hairline--bottom、van-hairline--left、van-hairline--right、van-hairline--top-bottom、van-hairline--surround
-:::
-
-```js
-/* vue.config.js */
-postcss: {
-  plugins: [
-    autoprefixer(),
-    pxtoviewport({
-      viewportWidth: 375,
-      viewportHeight: 667,
-      unitPrecision: 3,
-      viewportUnit: "vw",
-      selectorBlackList: [".ignore", ".hairlines", "van-circle__layer"],
-      minPixelValue: 1,
-      mediaQuery: false
-    })
-  ];
-}
+<!-- good -->
+<img class="avatar" src="..." />
 ```
 
-对于 vw 不能解决的适配问题，可以配合媒体查询解决
+- js 变量命名采用单驼峰命名，一个函数作用域中所有的变量声明尽量提到函数首部
+- 代码规则与风格：eslint+prettier
+- 使用 sass 编写样式,css 风格遵循 bem 规范
+
+## 组件封装
+
+- 所有公共组件，用 zv-包装
+- 涉及到业务逻辑的组件，在封装的时候，通过 mixin，将业务逻辑代码和基本组件代码区分
+- 可以抽取的布局组件，统一存放在 layouts 文件夹中
+
+### 业务组件
+
+- 对于一些可能被多处引用的功能模块，建议提炼成业务组件统一管理
+- 只负责一块相对独立，稳定的功能
+- 没有单独的路由配置
+- 可能是纯静态的，也可能包含自己的 state，但不涉及 vuex 的数据流，仅受父组件传递的参数控制
+
+## 注释
+
+方法注释：
+
+```js
+/**
+ * @Date: 2019/1/28
+ * @Author: 刘宇琳
+ * @Desc: 描述
+ */
+```
+
+页面或组件 头部提示类注释：
+
+```js
+<!--公用组件：列表
+/**
+* @author 刘宇琳
+* @date 2019/2/18
+* @param dataSource：列表数据源
+* 用法：集成了无数据页面、上下拉刷新。参考examples/List.vue
+*/
+-->
+
+<!--页面：设备列表
+/**
+* @author 刘宇琳
+* @date 2019/2/18
+*/
+-->
+
+<!--设备列表页面组件：设备列表
+/**
+ * @author 刘宇琳
+ * @date 2019/2/18
+ * @param dataSource：列表数据源
+ * 用法：****
+ */
+-->
+
+```
+
+方法内逻辑、属性注释
+
+```js
+// 这是具体逻辑代码注释
+```
+
+css 注释
 
 ```css
-/* 小屏幕下，改变某样式中的span标签的样式 */
-@media only screen and (min-width: 320px) and (max-width: 340px) {
-  .test {
-    span {
-      margin-left: 1.5%;
+/* 这是 css 注释内容 */
+```
+
+html 注释
+
+```html
+<!-- html注释 -->
+```
+
+## 插件
+
+- 插件统一写在 plugins 文件夹中，index.js 会自动引入到项目中去
+
+## 路由
+
+- 根据不同的业务模块进行拆分路由,在每个子模块中导出一个路由配置数组。
+- 在 router 文件夹中，为每个模块单独创建一个文件夹。router/index.js 中扫描所有的
+  路由并自动加载(若新加的路由没有及时生效，需重新编译)
+
+## 代码复杂度判断（计算决策点）
+
+- 从 1 开始，一直往下通过函数
+- 一旦遇到 if while for else 或者带有循环的高阶函数，比如 forEach map 等就加 1
+- 给 case 语句中的每一种情况都加 1
+
+```js
+function fun(arr, n) {
+  let len = arr.length;
+  for (let i = 0; i < len; i++) {
+    if (arr[i] == n) {
+      // todo...
+    } else {
+      // todo...
     }
   }
-}
+} //决策点为 3
 ```
+
+| 数量区间 |  度量结果                                    |
+| -------- | -------------------------------------------- |
+| 0-5      | 这个函数可能还不错                           |
+| 6-10     | 得想办法简化这个函数了                       |
+| 10+      | 把这个函数的某一部分拆分成另一个函数并调用他 |

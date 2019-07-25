@@ -19,7 +19,9 @@ module.exports = {
           ["/common/network", "网络请求"],
           ["/common/permission", "权限控制"],
           ["/common/template", "模板创建"],
-          ["/common/component", "定义组件"]
+          ["/common/component", "定义组件"],
+          ["/common/optimize", "优化"],
+          ["/common/cli", "脚手架"]
         ]
       },
       {
