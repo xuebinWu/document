@@ -1,6 +1,7 @@
 module.exports = {
   title: "产品部前端开发文档",
   description: "Just do it",
+  base: "./",
   themeConfig: {
     displayAllHeaders: true,
     nav: [
@@ -18,8 +19,10 @@ module.exports = {
           ["/common/env", "环境编译"],
           ["/common/network", "网络请求"],
           ["/common/permission", "权限控制"],
+          ["/common/router", "路由"],
           ["/common/template", "模板创建"],
           ["/common/component", "定义组件"],
+          ["/common/svg", "图标"],
           ["/common/optimize", "优化"],
           ["/common/cli", "脚手架"]
         ]

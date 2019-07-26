@@ -1,7 +1,5 @@
 # 项目目录结构
 
-## 目录树
-
 ```text
 .
 ├── src
@@ -35,13 +33,12 @@
 │   │   ├── errorLog.js            全局捕获错误方法
 │   │   ├── index.js               一般工具方法
 │   │   ├── permission.js          全局路由权限控制
-│   │   ├── request                封装网络请求
-│   │   └── solution.js            各种疑难杂症解决方法集合
+│   │   └── request                封装网络请求
 │   └── views
 │       ├── Home.vue
 │       ├── errorPage              404页面
 │       └── examples               组件示例
-├── vue.config.js
+├── vue.config.js                  Vue项目配置文件
 ├── .env.mock                      设置mock环境下，所要的全局属性（定义模拟数据）
 ├── .env.debugger                  设置debugger环境下，所要的全局属性(用于局域网中调试。若后端是微服务，配合debugger.port.js。)
 ├── .env.development               设置development环境下，所要的全局属性（开发环境）
