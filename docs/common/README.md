@@ -4,4 +4,8 @@
 
 ## 前端开发流程
 
+::: warning 注意
+开发前、开发后请记得更新 jira 任务状态。
+:::
+
 <img :src="$withBase('/flow.png')" alt="开发流程图">
