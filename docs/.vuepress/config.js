@@ -1,7 +1,7 @@
 module.exports = {
   title: "产品部前端开发文档",
   description: "Just do it",
-  base: "./",
+  base: "/web_doc/",
   themeConfig: {
     displayAllHeaders: true,
     nav: [
