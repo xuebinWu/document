@@ -40,16 +40,9 @@ zv init d hello-world
 
 ```bash
 # hello-world文件夹名
-zv init d hello-world
-```
-
-```bash
-# hello-world文件夹名
 zv init hello-world
 ```
 
 ## 特性
-
-所有项目的模板都放在 git 上
 
 - [模板项目](https://github.com/122687220/web-template)

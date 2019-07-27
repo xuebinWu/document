@@ -1,9 +1,26 @@
 module.exports = {
-  title: "产品部前端开发文档",
+  title: "产品部 · 前端开发文档",
   description: "Just do it",
-  base: "/web_doc/",
+  base: "/",
   themeConfig: {
-    displayAllHeaders: true,
+    search: true,
+    searchMaxSuggestions: 10,
+    lastUpdated: "上次更新",
+    repo: "122687220/document",
+    repoLabel: "GitHub",
+    docsRepo: "122687220/document",
+    docsDir: "docs",
+    docsBranch: "master",
+    editLinks: true,
+    editLinkText: "帮助我们改善此页面！",
+    serviceWorker: {
+      updatePopup: true, // Boolean | Object, 默认值是 undefined.
+      // 如果设置为 true, 默认的文本配置将是:
+      updatePopup: {
+        message: "此页面以更新，请点击Refresh",
+        buttonText: "Refresh"
+      }
+    },
     nav: [
       { text: "首页", link: "/" },
       { text: "指南", link: "/common/" },

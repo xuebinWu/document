@@ -10,7 +10,7 @@
 所有会用到的 SuperWebviewSDK 中的方法都会被封装在 Hybrid 类中，并且会将类实例绑定到 Vue 实例上。不要在页面中直接使用 api.xx 去调用 SuperWebviewSDK 的方法。
 :::
 
-![An image](/jiagou.png)
+<img :src="$withBase('/jiagou.png')" alt="移动端架构图">
 
 ## 调试
 
