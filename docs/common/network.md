@@ -36,11 +36,6 @@ service.interceptors.request.use(
     if (!config.data || !config.data.isHideLoading) {
       loading = toast({ loading: "加载中..." });
     }
-    // 配置调试
-    handleUrl(config);
-
-    // 处理请求参数
-    handleParams(config);
 
     // 是否要更改header内容 上传文件
     if (config.isFile) {
@@ -52,19 +47,7 @@ service.interceptors.request.use(
       delete config.data.isHideLoading;
     }
 
-    // 用qs处理参数可以处理options请求（预请求），或者设置'Access-Control-MAX-AGE':'1000'
-    if (config.method === "post") {
-      // 设置参数拼接方式
-      config.data = qs.stringify(config.data, {
-        arrayFormat: "indices",
-        allowDots: true,
-        encode: false
-      });
-    } else {
-      if (config.data) {
-        config.url = config.url + "?" + qs.stringify(config.data);
-      }
-    }
+    ...
 
     return config;
   },
@@ -91,7 +74,7 @@ service.interceptors.response.use(
         return throwErr(res);
       }
     } else {
-      // 隐藏loading
+      // 网络请求失败
       return Promise.reject("networkRequestError");
     }
   },
@@ -122,7 +105,7 @@ service.interceptors.response.use(
 
 ```js
 request({
-  url: "/management/maintainRecord/uploadMaintainPic/w/v1",
+  url: "/test",
   method: "post",
   data: { isHideLoading: true }
 });
@@ -134,7 +117,7 @@ request({
 
 ```js
 request({
-  url: "/management/maintainRecord/uploadMaintainPic/w/v1",
+  url: "/test",
   method: "post",
   isFile: true
 });
@@ -177,11 +160,11 @@ function handleUrl(config) {
 // 生产环境将此变量改为true，开启双域名
 function doubleDomain(config) {
   // 添加需处理的接口相对URL
-  const urls = ["/aa/xxx", "/bb/xxx"];
-  if (config.baseURL === "https://aaa.com" && urls.indexOf(config.url) > -1) {
+  const urls = ["/test/xxx", "/bb/xxx"];
+  if (config.baseURL === "https://test.com" && urls.indexOf(config.url) > -1) {
     const tmpArr = config.url.split("/");
     config.url = `/${tmpArr[tmpArr.length - 1]}`;
-    config.baseURL = "https://bbb.com";
+    config.baseURL = "https://zoomlion.com";
   }
 }
 ```
