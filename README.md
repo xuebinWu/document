@@ -12,17 +12,21 @@
   </a>
 </p>
 
+> 产品部前端开发文档
+
 ### 🏠 [Homepage](https://github.com/122687220/document#readme)
 
-## Install
+## 运行
 
 ```sh
-npm install
+npm run doc:dev
 ```
 
 ## Author
 
-* Github: [@122687220](https://github.com/122687220)
+👤 **刘宇琳**
+
+- Github: [@122687220](https://github.com/122687220)
 
 ## 🤝 Contributing
 
@@ -34,7 +38,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
+Copyright © 2019 [刘宇琳](https://github.com/122687220).<br />
 This project is [ISC](https://github.com/122687220/document/blob/master/LICENSE) licensed.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+---
