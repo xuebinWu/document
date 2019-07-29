@@ -1,6 +1,6 @@
 # 环境编译
 
-通常项目中会存在 5 个环境的配置文件，其中 mock 环境是用于模拟数据
+通常项目中会存在 5 个环境的配置文件，其中 mock 环境是用于模拟数据。在项目开发前，最好定义好各环境的请求地址。
 
 ::: tip 接口调试
 mock 环境: 当后台接口还未完成时，本地模拟数据进行调试。
@@ -34,11 +34,14 @@ debugger 环境: 当需要连接后台电脑调试接口时，将.env.debugger �
     // 测试环境编译
     "serve": "vue-cli-service serve",
 
-    // 生产环境编译
+    // 生产环境编译打包
     "build": "vue-cli-service build",
 
-    // 预生产环境编译
+    // 预生产环境编译打包
     "pre": "vue-cli-service build --mode prepro",
+
+    // 测试环境编译打包
+    "dev": "vue-cli-service build --mode development",
 
     // 调试环境编译
     "debugger": "vue-cli-service serve --mode debugger",

@@ -175,25 +175,30 @@ BEM 代表 Block**Element--Modifier, 莫要出现 Block**Element\_\_Element--Mod
       </div>
     </div>
   </div>
+
   <div class="zv-table__body-wrapper">
     <div class="zv-table__body">
       <div class="zv-table__body-text">
         {{ title }}
       </div>
     </div>
+
     <div class="zv-table__empty-block">
       <span class="zv-table__empty-text"> </span>
     </div>
+
     <div class="zv-table__append-wrapper">
       <slot name="append"></slot>
     </div>
   </div>
+
   <div class="zv-table__fixed">
     <div class="zl-table__fixed-header-wrapper">
       <div class="zv-table__fixed-header-text">
         {{ title }}
       </div>
     </div>
+    
     <div class="zl-table__fixed-body-wrapper">
       <div class="zv-table__fixed-body-text">
         {{ title }}

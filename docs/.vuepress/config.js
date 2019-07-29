@@ -64,7 +64,9 @@ module.exports = {
           ["/common/component", "定义组件"],
           ["/common/svg", "图标"],
           ["/common/optimize", "优化"],
-          ["/common/cli", "脚手架"]
+          ["/common/cli", "脚手架"],
+          ["/common/code-review", "Code Review"],
+          ["/common/version", "版本管理"]
         ]
       },
       {
