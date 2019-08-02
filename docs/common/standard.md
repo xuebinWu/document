@@ -2,7 +2,9 @@
 
 ## 书写规范
 
-- 普通 JS 文件、目录命名、CSS, SCSS 文件命名，以小写字母命名，多个单词以下划线连接，例如 util.js、util_helper.js
+- 普通 JS 文件、CSS, SCSS 文件命名，以小写字母命名，多个单词以下划线连接，例如 util.js、util_helper.js
+- 文件夹名和项目名使用中划线
+- .vue文件以双驼峰命名，且文件名字与name属性保持一致
 - 按模块划分文件，每个文件一般都以 index 命名的文件作为入口页面
 - 文件头部、方法、属性必须要有注释
 - 模块文件夹中，必需要有 index 文件，代表入口
@@ -101,9 +103,46 @@ html 注释
 <!-- html注释 -->
 ```
 
-## 插件
+## 部分 VSCode 插件
 
-- 插件统一写在 plugins 文件夹中，index.js 会自动引入到项目中去
+- eslint
+- prettier
+- Auto Close Tag
+- Auto Import
+- Auto Rename Tag
+- Chinese(Simplified) Language Pack
+- Vetur
+- vue-beautify
+- koroFileHeader
+  ...
+
+### VSCode 配置文件
+
+```json
+{
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "fileheader.customMade": {
+    "Author": "你的姓名",
+    "Date": "Do not edit",
+    "Description": "file content"
+  }
+}
+```
 
 ## 代码复杂度判断（计算决策点）
 
@@ -198,7 +237,7 @@ BEM 代表 Block**Element--Modifier, 莫要出现 Block**Element\_\_Element--Mod
         {{ title }}
       </div>
     </div>
-    
+
     <div class="zl-table__fixed-body-wrapper">
       <div class="zv-table__fixed-body-text">
         {{ title }}

@@ -225,3 +225,45 @@ export function error() {
   });
 }
 ```
+
+## 使用示例
+
+页面逻辑：在 A 模块中，有个 B 页面。现在要在 B 页面，向后台发起一个网络请求，拿到 B 页面的数据
+
+### 第一步，先定义好 api
+
+在 src/api 文件夹中新建一个名为 A（文件夹名字和模块名保持一致）的文件夹，在 A 文件夹下新建一个 index.js 的文件，用来存储整个 A 模块的网络请求 api。
+
+```js
+// 导入请求对象
+import request from "@/utils/request";
+
+// 新建一个接口请求
+export function test(data) {
+  return request({
+    url: "/test", // 接口请求的相对地址
+    method: "post", // 请求类型
+    data // 请求参数
+  });
+}
+```
+
+### 第二步，调用
+
+在 B 页面中导入新建的接口请求并调用
+
+```js
+import { test } from '@/api/A' // or import * as api from '@/api/A'
+
+export default {
+  name: 'B',
+  created() {
+    this.loadData()
+  },
+  methods: {
+    async loadData() {
+      // 返回值结构 { data: { ... } }
+      const { data } = await test({ params }) // or await api.test({ params })
+    }
+  }
+```

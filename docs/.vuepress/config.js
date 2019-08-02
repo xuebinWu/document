@@ -74,7 +74,8 @@ module.exports = {
         children: [
           ["/mobile/", "指南"],
           ["/mobile/fit", "适配"],
-          ["/mobile/hybrid", "Hybrid使用"]
+          ["/mobile/hybrid", "Hybrid使用"],
+          ["/mobile/prepare", "开发准备"]
         ]
       },
       {
@@ -84,16 +85,16 @@ module.exports = {
     ]
   },
   plugins: [
-    [
-      "@vuepress/pwa",
-      {
-        serviceWorker: true,
-        updatePopup: {
-          message: "发现新内容可用.",
-          buttonText: "刷新"
-        }
-      }
-    ],
+    // [
+    //   "@vuepress/pwa",
+    //   {
+    //     serviceWorker: true,
+    //     updatePopup: {
+    //       message: "发现新内容可用.",
+    //       buttonText: "刷新"
+    //     }
+    //   }
+    // ],
     ["@vuepress/back-to-top", true],
     ["@vuepress/medium-zoom", true]
   ]
