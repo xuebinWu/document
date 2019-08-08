@@ -75,7 +75,9 @@ module.exports = {
           ["/mobile/", "指南"],
           ["/mobile/fit", "适配"],
           ["/mobile/hybrid", "Hybrid使用"],
-          ["/mobile/prepare", "开发准备"]
+          ["/mobile/modules", "公共模块"],
+          ["/mobile/prepare", "开发准备"],
+          ["/mobile/install", "安装包地址"]
         ]
       },
       {
