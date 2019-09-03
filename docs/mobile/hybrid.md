@@ -1,3 +1,9 @@
+<!--
+ * @Author: Yu lin Liu
+ * @Date: 2019-07-25 16:28:31
+ * @Description: file content
+ -->
+
 # Hybrid 类的使用
 
 ## 绑定
@@ -138,51 +144,98 @@ addObserver(funcName, callback) {
 }
 ```
 
-## 选取相册
+## web 与原生交互方法
 
-此方法用于选取照片，也可通过拍照获取照片。会返回一个 Promise 对象，一般配合 zv-upload 组件一起使用。max: 最大能选取的照片数
-
-```js
-/* 使用 */
-
-async getPhoto() {
-    try {
-      const imgs = await this.$h.uploadImage({ max: 4, fileClass: "test" });
-    } catch (error) {
-      throw error
-    }
-}
-
-```
+此方法有 web 端调用，并和原生开发人员约定好字段
 
 ```js
 /* Hybrid */
-
-// 选择图片上传
-uploadImage({
-    compression = true,
-    multiple = true,
-    max = 1,
-    quality = 50,
-    resize = 50,
-    stickers = {},
-    fileClass = ''
-} = {}) {
+addEventListener(name) {
     return new Promise((resolve, reject) => {
-        apiUpLoad(_config, max, fileClass, imgs => {
-            if (imgs === 'cancel') {
-                reject('取消选择')
-            } else {
-                resolve(imgs)
-            }
-        })
+      api.addEventListener({ name }, function(ret, err) {
+        if (err) {
+          reject(err)
+        } else {
+          resolve(ret.value)
+        }
+      })
     })
 }
 ```
 
+## 选取相册
+
+此方法用于选取照片，并上传图片，返回一个数组。具体的功能 zv-ui 中的 update 组件已经实现，项目中只需要使用 zv-update 就可以了。
+
+```js
+/* 使用 */
+
+// 相册、拍照
+this.$h
+  .accessNative({ name: "takePhoto", params })
+  .then(res => {
+    /*
+     * 返回结果
+        [
+            {
+                "code" : '0',
+                "id" : '123456789',
+                "path" : ''
+            }
+        ]
+    */
+  })
+  .catch(err => {});
+
+// 拍照， 直接调起相机
+this.accessNative({ name: "takeCamera", params })
+  .then(res => {
+    /*
+     * 返回结果
+        [
+            {
+                "code" : '0',
+                "id" : '123456789',
+                "path" : ''
+            }
+        ]
+    */
+  })
+  .catch(err => {});
+```
+
 ## 地图
 
-地图待开发。
+```js
+/* 使用 */
+
+// 显示地图，选择位置
+this.accessNative({ name: "getLocateInfo", params: { isMap: true } })
+  .then(res => {
+    /*
+        "city" : 城市,
+        "street" : 街道,
+        "locationDescribe" : 位置详情,
+        "province" : 省份,
+        "district" : 区域,
+        "streetNumber" : 门牌号
+      */
+  })
+  .catch(err => {});
+
+// 不显示地图，定位当前位置
+this.accessNative({ name: "getLocateInfo" })
+  .then(res => {
+    /*
+        "city" : 城市,
+        "address" : 位置详情,
+        "name" : 位置名字,
+        "province" : 省份,
+        "district" : 区域
+      */
+  })
+  .catch(err => {});
+```
 
 ## 存储
 

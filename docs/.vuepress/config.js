@@ -1,3 +1,8 @@
+/*
+ * @Author: Yu lin Liu
+ * @Date: 2019-07-27 09:58:03
+ * @Description: file content
+ */
 module.exports = {
   title: "产品部 · 前端开发文档",
   description: "Just do it",
@@ -87,16 +92,16 @@ module.exports = {
     ]
   },
   plugins: [
-    // [
-    //   "@vuepress/pwa",
-    //   {
-    //     serviceWorker: true,
-    //     updatePopup: {
-    //       message: "发现新内容可用.",
-    //       buttonText: "刷新"
-    //     }
-    //   }
-    // ],
+    [
+      "@vuepress/pwa",
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "发现新内容可用.",
+          buttonText: "刷新"
+        }
+      }
+    ],
     ["@vuepress/back-to-top", true],
     ["@vuepress/medium-zoom", true]
   ]
