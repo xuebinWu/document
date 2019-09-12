@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>路由 | 产品部 · 前端开发文档</title>
+    <title>产品部 · 前端开发文档</title>
     <meta name="description" content="Just do it">
     <link rel="icon" href="/web_doc/favicon.ico">
   <link rel="manifest" href="/web_doc/manifest.json">
@@ -15,7 +15,7 @@
   <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
   <meta name="msapplication-TileColor" content="#000000">
     
-    <link rel="preload" href="/web_doc/assets/css/0.styles.5a6887f8.css" as="style"><link rel="preload" href="/web_doc/assets/js/app.51a0e635.js" as="script"><link rel="preload" href="/web_doc/assets/js/2.63b8ab38.js" as="script"><link rel="preload" href="/web_doc/assets/js/17.442bee63.js" as="script"><link rel="preload" href="/web_doc/assets/js/3.95f96109.js" as="script"><link rel="prefetch" href="/web_doc/assets/js/10.ead48301.js"><link rel="prefetch" href="/web_doc/assets/js/11.a038853d.js"><link rel="prefetch" href="/web_doc/assets/js/12.d61f3b3c.js"><link rel="prefetch" href="/web_doc/assets/js/13.56602550.js"><link rel="prefetch" href="/web_doc/assets/js/14.d0f7c088.js"><link rel="prefetch" href="/web_doc/assets/js/15.7c8706de.js"><link rel="prefetch" href="/web_doc/assets/js/16.5921ee06.js"><link rel="prefetch" href="/web_doc/assets/js/18.a838dbc8.js"><link rel="prefetch" href="/web_doc/assets/js/19.458f8fe8.js"><link rel="prefetch" href="/web_doc/assets/js/20.17ede909.js"><link rel="prefetch" href="/web_doc/assets/js/21.a76cd600.js"><link rel="prefetch" href="/web_doc/assets/js/22.49bb1922.js"><link rel="prefetch" href="/web_doc/assets/js/23.8ac382af.js"><link rel="prefetch" href="/web_doc/assets/js/24.2908c28c.js"><link rel="prefetch" href="/web_doc/assets/js/25.7a91df40.js"><link rel="prefetch" href="/web_doc/assets/js/26.15476cef.js"><link rel="prefetch" href="/web_doc/assets/js/27.26ff8aa7.js"><link rel="prefetch" href="/web_doc/assets/js/28.a9f98dc7.js"><link rel="prefetch" href="/web_doc/assets/js/29.d39f7435.js"><link rel="prefetch" href="/web_doc/assets/js/30.e66dc600.js"><link rel="prefetch" href="/web_doc/assets/js/4.b220b74b.js"><link rel="prefetch" href="/web_doc/assets/js/5.fb29c173.js"><link rel="prefetch" href="/web_doc/assets/js/6.c7005dee.js"><link rel="prefetch" href="/web_doc/assets/js/7.9d1d30e7.js"><link rel="prefetch" href="/web_doc/assets/js/8.736d8eff.js"><link rel="prefetch" href="/web_doc/assets/js/9.71e4dd11.js">
+    <link rel="preload" href="/web_doc/assets/css/0.styles.5a6887f8.css" as="style"><link rel="preload" href="/web_doc/assets/js/app.021e5ab0.js" as="script"><link rel="preload" href="/web_doc/assets/js/2.63b8ab38.js" as="script"><link rel="preload" href="/web_doc/assets/js/17.1b8c532e.js" as="script"><link rel="preload" href="/web_doc/assets/js/3.95f96109.js" as="script"><link rel="prefetch" href="/web_doc/assets/js/10.ead48301.js"><link rel="prefetch" href="/web_doc/assets/js/11.a038853d.js"><link rel="prefetch" href="/web_doc/assets/js/12.d61f3b3c.js"><link rel="prefetch" href="/web_doc/assets/js/13.56602550.js"><link rel="prefetch" href="/web_doc/assets/js/14.bd43af54.js"><link rel="prefetch" href="/web_doc/assets/js/15.7c8706de.js"><link rel="prefetch" href="/web_doc/assets/js/16.5921ee06.js"><link rel="prefetch" href="/web_doc/assets/js/18.fb240c28.js"><link rel="prefetch" href="/web_doc/assets/js/19.a56c5258.js"><link rel="prefetch" href="/web_doc/assets/js/20.17ede909.js"><link rel="prefetch" href="/web_doc/assets/js/21.049259a0.js"><link rel="prefetch" href="/web_doc/assets/js/22.6aa0b800.js"><link rel="prefetch" href="/web_doc/assets/js/23.80dc3806.js"><link rel="prefetch" href="/web_doc/assets/js/24.2908c28c.js"><link rel="prefetch" href="/web_doc/assets/js/25.2f724797.js"><link rel="prefetch" href="/web_doc/assets/js/26.fec15117.js"><link rel="prefetch" href="/web_doc/assets/js/27.650d2881.js"><link rel="prefetch" href="/web_doc/assets/js/28.68fc608c.js"><link rel="prefetch" href="/web_doc/assets/js/29.1f1ad5fe.js"><link rel="prefetch" href="/web_doc/assets/js/30.e66dc600.js"><link rel="prefetch" href="/web_doc/assets/js/4.b220b74b.js"><link rel="prefetch" href="/web_doc/assets/js/5.fb29c173.js"><link rel="prefetch" href="/web_doc/assets/js/6.c7005dee.js"><link rel="prefetch" href="/web_doc/assets/js/7.9d1d30e7.js"><link rel="prefetch" href="/web_doc/assets/js/8.736d8eff.js"><link rel="prefetch" href="/web_doc/assets/js/9.71e4dd11.js">
     <link rel="stylesheet" href="/web_doc/assets/css/0.styles.5a6887f8.css">
   </head>
   <body>
@@ -33,49 +33,33 @@
 │   │   └── index.js
 │   └── device
 │   │   └── index.js
-</code></pre></div><p>每个路由信息，必须包含 path、name、component、meta 属性。其中 component 定义为异步加载的方法加载页面组件，meta 中必须要有 title 属性，title 属性将用于页面统计。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+</code></pre></div><p>每个路由信息，必须包含 path、name、component、meta 属性。其中 component 定义为异步加载的方法加载页面组件，meta 中必须要有 title 属性，title 属性将用于页面统计。</p> <div class="warning custom-block"><p>定义路由时，path、页面路径、页面所在的文件夹名字，应该一一对应，即根据 path 字段，可以在 view 文件夹中找到对应的页面</p></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span>
     path<span class="token punctuation">:</span> <span class="token string">&quot;/login&quot;</span><span class="token punctuation">,</span>
-    name<span class="token punctuation">:</span> <span class="token string">&quot;Login&quot;</span><span class="token punctuation">,</span>
-    <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/views/Login/index.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">&quot;login&quot;</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/views/login/index.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">&quot;登录&quot;</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">&quot;/device/device-detail&quot;</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">&quot;device-detail&quot;</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/views/device/device-detail/index.vue&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    meta<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">&quot;设备详情&quot;</span> <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">]</span><span class="token punctuation">;</span>
 </code></pre></div><p>对于 PC 端可能存在布局组件的情况</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> BaseLayout <span class="token keyword">from</span> <span class="token string">&quot;@/layouts/BaseLayout&quot;</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> SimpleLayout <span class="token keyword">from</span> <span class="token string">&quot;@/layouts/SimpleLayout&quot;</span><span class="token punctuation">;</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
   <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> <span class="token string">&quot;/notice&quot;</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">:</span> <span class="token string">&quot;/notice-manager&quot;</span><span class="token punctuation">,</span>
     component<span class="token punctuation">:</span> BaseLayout<span class="token punctuation">,</span>
     children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
       <span class="token punctuation">{</span>
         path<span class="token punctuation">:</span> <span class="token string">&quot;index&quot;</span><span class="token punctuation">,</span>
-        name<span class="token punctuation">:</span> <span class="token string">&quot;NoticeManager&quot;</span><span class="token punctuation">,</span>
-        <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/views/noticeManager/index&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        name<span class="token punctuation">:</span> <span class="token string">&quot;notice-manager&quot;</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/views/notice-manager/index&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
         meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           title<span class="token punctuation">:</span> <span class="token string">&quot;公告管理&quot;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span>
-    path<span class="token punctuation">:</span> <span class="token string">&quot;/notice-managers&quot;</span><span class="token punctuation">,</span>
-    component<span class="token punctuation">:</span> SimpleLayout<span class="token punctuation">,</span>
-    children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token punctuation">{</span>
-        path<span class="token punctuation">:</span> <span class="token string">&quot;notice-edit&quot;</span><span class="token punctuation">,</span>
-        name<span class="token punctuation">:</span> <span class="token string">&quot;NoticeEdit&quot;</span><span class="token punctuation">,</span>
-        <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/views/noticeManager/NoticeEdit/index&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          title<span class="token punctuation">:</span> <span class="token string">&quot;公告编辑&quot;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        path<span class="token punctuation">:</span> <span class="token string">&quot;notice-check&quot;</span><span class="token punctuation">,</span>
-        name<span class="token punctuation">:</span> <span class="token string">&quot;NoticeCheck&quot;</span><span class="token punctuation">,</span>
-        <span class="token function-variable function">component</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&quot;@/views/noticeManager/NoticeEdit/index&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-        meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          title<span class="token punctuation">:</span> <span class="token string">&quot;公告详情&quot;</span>
         <span class="token punctuation">}</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
@@ -90,6 +74,6 @@
         </a>
         →
       </span></p></div> </main></div><div class="global-ui"><!----><!----></div></div>
-    <script src="/web_doc/assets/js/app.51a0e635.js" defer></script><script src="/web_doc/assets/js/2.63b8ab38.js" defer></script><script src="/web_doc/assets/js/17.442bee63.js" defer></script><script src="/web_doc/assets/js/3.95f96109.js" defer></script>
+    <script src="/web_doc/assets/js/app.021e5ab0.js" defer></script><script src="/web_doc/assets/js/2.63b8ab38.js" defer></script><script src="/web_doc/assets/js/17.1b8c532e.js" defer></script><script src="/web_doc/assets/js/3.95f96109.js" defer></script>
   </body>
 </html>

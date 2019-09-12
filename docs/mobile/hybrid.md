@@ -165,7 +165,7 @@ addEventListener(name) {
 
 ## 选取相册
 
-此方法用于选取照片，并上传图片，返回一个数组。具体的功能 zv-ui 中的 update 组件已经实现，项目中只需要使用 zv-update 就可以了。
+此方法用于选取照片，并上传图片，返回一个数组，params 是上传接口所需的参数。具体的功能 zv-ui 中的 update 组件已经实现，项目中只需要使用 zv-update 就可以了。
 
 ```js
 /* 使用 */
@@ -180,7 +180,7 @@ this.$h
             {
                 "code" : '0',
                 "id" : '123456789',
-                "path" : ''
+                "url" : ''
             }
         ]
     */
@@ -196,7 +196,7 @@ this.accessNative({ name: "takeCamera", params })
             {
                 "code" : '0',
                 "id" : '123456789',
-                "path" : ''
+                "url" : ''
             }
         ]
     */
@@ -208,6 +208,14 @@ this.accessNative({ name: "takeCamera", params })
 
 ```js
 /* 使用 */
+/**
+ * params 接受5个参数
+ * isMap - true: 显示地图页面，选择地址  false: 后台定位
+ * address - 地图显示的默认位置信息（需要根据所传字段显示默认地址时，必传）
+ * city - 地图显示的默认城市（非必传，和 address 字段配合使用）
+ * latitude - 地图显示的默认位置信息（需要根据所传经纬度显示默认地址时，必传）
+ * longitude - 地图显示的默认位置信息（需要根据所传经纬度显示默认地址时，必传）
+ */
 
 // 显示地图，选择位置
 this.accessNative({ name: "getLocateInfo", params: { isMap: true } })
@@ -218,12 +226,14 @@ this.accessNative({ name: "getLocateInfo", params: { isMap: true } })
         "locationDescribe" : 位置详情,
         "province" : 省份,
         "district" : 区域,
-        "streetNumber" : 门牌号
+        "streetNumber" : 门牌号,
+        "latitude" : 纬度,
+        "longitude" : 经度
       */
   })
   .catch(err => {});
 
-// 不显示地图，定位当前位置
+// 不显示地图，后台定位当前位置
 this.accessNative({ name: "getLocateInfo" })
   .then(res => {
     /*
@@ -231,10 +241,29 @@ this.accessNative({ name: "getLocateInfo" })
         "address" : 位置详情,
         "name" : 位置名字,
         "province" : 省份,
-        "district" : 区域
+        "district" : 区域,
+        "latitude" : 纬度,
+        "longitude" : 经度
       */
   })
   .catch(err => {});
+```
+
+## 打开外链
+
+调用此方法，会打开一个新的窗口，用来加载一个 web 页面
+
+```js
+/* 使用 */
+this.$h.accessNative({
+  name: "openUrl",
+  params: {
+    // web页面的访问地址 ( 必传 )
+    url: " ",
+    // web页面要显示的title ( 非必传 )
+    title: " "
+  }
+});
 ```
 
 ## 存储
