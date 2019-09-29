@@ -222,11 +222,10 @@ this.accessNative({ name: "getLocateInfo", params: { isMap: true } })
   .then(res => {
     /*
         "city" : 城市,
-        "street" : 街道,
-        "locationDescribe" : 位置详情,
+        "address" : 位置详情,
+        "name" : 位置名字,
         "province" : 省份,
         "district" : 区域,
-        "streetNumber" : 门牌号,
         "latitude" : 纬度,
         "longitude" : 经度
       */
@@ -236,12 +235,13 @@ this.accessNative({ name: "getLocateInfo", params: { isMap: true } })
 // 不显示地图，后台定位当前位置
 this.accessNative({ name: "getLocateInfo" })
   .then(res => {
-    /*
+     /*
         "city" : 城市,
-        "address" : 位置详情,
-        "name" : 位置名字,
+        "street" : 街道,
+        "locationDescribe" : 位置详情,
         "province" : 省份,
         "district" : 区域,
+        "streetNumber" : 门牌号,
         "latitude" : 纬度,
         "longitude" : 经度
       */

@@ -39,8 +39,6 @@ then
   git checkout develop
   git rebase master
   git push origin develop
-
-  npm run build
 fi
 ```
 
