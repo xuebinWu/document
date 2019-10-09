@@ -1,6 +1,6 @@
 # 权限控制
 
-页面级的权限控制，通过 Vue-router 提供的路由守卫实现。
+页面级的权限控制，通过 Vue-router 提供的路由守卫实现，路由控制文件目录为/utils/permission.js
 
 ```js
 router.beforeEach((to, from, next) => {

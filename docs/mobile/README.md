@@ -1,6 +1,6 @@
 # 介绍
 
-移动端 为混合开发，借助 APICloud 的 SuperWebviewSDK 实现 web 和原生的交互，并将所有的交互方法，封装在 utils 目录下的 hybrid 文件夹中。web 侧，以 Vue 为技术栈进行开发，主要涉及到的第三方库有 Vuex、vue-router、Vue-n18i、vant、axios 等。原生侧，iOS 为 Objective-C 开发，Android 为 Java 开发。此文档主要介绍 web 侧和 web 与原生交互的开发。
+移动端 为混合开发，借助 APICloud 的 SuperWebviewSDK 实现 web 和原生的交互，并将所有的交互方法，封装在 utils 目录下的 hybrid 文件夹中。web 侧，以 Vue 为技术栈进行开发，主要涉及到的第三方库有 Vuex、vue-router、Vue-i18n、vant、axios 等。原生侧，iOS 为 Objective-C 开发，Android 为 Java 开发。此文档主要介绍 web 侧和 web 与原生交互的开发。
 
 ## 架构
 
