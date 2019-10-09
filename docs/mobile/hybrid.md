@@ -16,21 +16,40 @@ Hybrid 中封装了会用到的 SuperWebviewSDK 中的方法，便于在 web 页
 
 ```js
 // 将 Hybrid 类实例绑定到Vue上
+// 目前 options 只支持 baseColor (基础色)属性的设置 { baseColor: '#777777' }
 const hybrid = new Hybrid({ options });
 Vue.prototype.$h = hybrid.apiCloud;
 ```
 
-## apiready
+## isNative
 
-此事件是在 api 对象准备完毕后产生，在每个 web 模块中代码中都需要监听此事件，以确定 APICloud 扩展对象已经准备完毕，可以调用了。如 sessionId、权限、数据字典此类数据，都可在这个方法中获取，并存储到 store 中，以供 web 模块使用。
+此属性用来判断当前是否是真机环境。若是，则可以正常使用Hybrid
+
 
 ```js
 /* 使用 */
 
+this.$h.isNative
+```
+
+## apiready
+
+此事件是在 api 对象准备完毕后产生，在每个 web 模块中代码中都需要监听此事件，以确定 APICloud 扩展对象已经准备完毕，可以调用了。如 sessionId、权限、数据字典此类数据，都可在这个方法中获取，并存储到 store 中，以供 web 模块使用。若是给apiready方法传了store参数，hybrid将在store中注册一个store模块（默认模块名称为userInfo），用以管理公共数据。公共数据的存储key为UserInfo。
+
+```js
+/* 使用 */
+1.
 this.$h.apiready(() => {
     // 业务逻辑代码
     ...
 })
+
+2.
+import store from '@/store'
+this.$h.apiready(() => {
+    // 业务逻辑代码
+    ...
+}, store)
 ```
 
 ```js
@@ -41,6 +60,44 @@ apiready(callback) {
         callback()
     }
 }
+```
+
+```js
+/* Hybrid - 注册一个名为userInfo的store模块 */
+store.registerModule('userInfo', {
+    state: {
+        userInfo: {}
+    },
+    
+    mutations: {
+        SET_USERINFO: (state, userInfo) => {
+            state.userInfo = userInfo
+        }
+    },
+    
+    actions: {
+        SetUserInfo({ commit }, params) {
+            return new Promise((resolve, reject) => {
+                api.getPrefs({ key: 'UserInfo' }, (ret, err) => {
+                    if (err) {
+                        reject(err)
+                    } else {
+                        let info = {}
+                        if (ret && ret.value) {
+                            info = JSON.parse(ret.value)
+                            if (params) {
+                                info = { ...info, ...params }
+                                api.setPrefs({ key: 'UserInfo', value: JSON.stringify(info) })
+                            }
+                        }
+                        commit('SET_USERINFO', info)
+                        resolve(info)
+                    }
+                })
+            })
+        }
+    }
+})
 ```
 
 ## 打开新的 web 模块
