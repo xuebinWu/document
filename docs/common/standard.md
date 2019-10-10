@@ -103,47 +103,6 @@ html 注释
 <!-- html注释 -->
 ```
 
-## 部分 VSCode 插件
-
-- eslint
-- prettier
-- Auto Close Tag
-- Auto Import
-- Auto Rename Tag
-- Chinese(Simplified) Language Pack
-- Vetur
-- vue-beautify
-- koroFileHeader
-  ...
-
-### VSCode 配置文件
-
-```json
-{
-  "editor.formatOnType": true,
-  "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "html",
-      "autoFix": true
-    },
-    {
-      "language": "vue",
-      "autoFix": true
-    }
-  ],
-  "explorer.confirmDragAndDrop": false,
-  "fileheader.customMade": {
-    "Author": "你的姓名",
-    "Date": "Do not edit",
-    "Description": "file content"
-  }
-}
-```
-
 ## 代码复杂度判断（计算决策点）
 
 - 从 1 开始，一直往下通过函数

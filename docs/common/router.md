@@ -12,6 +12,10 @@
 每个模块文件夹中定义的路由，都会被自动加载到 router 文件夹下的 index.js 中，开发者不需要手动添加。(若新加的路由没有及时生效，需重新编译)
 :::
 
+::: warning 注意
+若无特殊要求，路由跳转用name值进行跳转 eg: this.$router.push({ name: 'app-center' })，避免使用path属性。
+:::
+
 ```
 .
 ├── router
