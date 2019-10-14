@@ -1,3 +1,8 @@
+<!--
+ * @Author: Yu lin Liu
+ * @Date: 2019-07-26 07:53:53
+ * @Description: file content
+ -->
 # zvalley-cli
 
 ::: warning 注意
@@ -36,7 +41,7 @@ zv init d hello-world
 
 ### 可选项目创建
 
-可选择创建 PC 端、移动端、多页应用项目
+可选择创建 PC 端、移动端、多页应用、移动端-门户开发 项目
 
 ```bash
 # hello-world文件夹名

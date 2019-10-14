@@ -68,6 +68,7 @@ module.exports = {
           ["/common/router", "路由"],
           ["/common/template", "模板创建"],
           ["/common/component", "定义组件"],
+          ["/common/locale", "国际化"],
           ["/common/svg", "图标"],
           ["/common/optimize", "优化"],
           ["/common/cli", "脚手架"],

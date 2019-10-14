@@ -10,6 +10,7 @@
 
 - eslint
 - prettier
+- stylelint
 - Auto Close Tag
 - Auto Import
 - Auto Rename Tag
@@ -49,6 +50,9 @@
 
 ## Webstore
 配置webpack: 你的项目路径/node_modules/@vue/cli-service/webpack.config.js
+
+### 部分Webstore插件
+- IntelliJ Stylelint Plugin
 
 ## SourceTree
 

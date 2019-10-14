@@ -1,3 +1,8 @@
+<!--
+ * @Author: Yu lin Liu
+ * @Date: 2019-07-26 07:53:53
+ * @Description: file content
+ -->
 # 编码规范
 
 ## 书写规范
@@ -40,7 +45,7 @@
 ```
 
 - js 变量命名采用单驼峰命名，一个函数作用域中所有的变量声明尽量提到函数首部
-- 代码规则与风格：eslint+prettier
+- 代码规则与风格：eslint+prettier+stylelint
 - 使用 sass 编写样式,css 风格遵循 bem 规范
 
 ## 注释

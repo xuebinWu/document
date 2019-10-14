@@ -275,7 +275,7 @@ this.accessNative({ name: "takeCamera", params })
  */
 
 // 显示地图，选择位置
-this.accessNative({ name: "getLocateInfo", params: { isMap: true } })
+this.$h.accessNative({ name: "getLocateInfo", params: { isMap: true } })
   .then(res => {
     /*
         "city" : 城市,
@@ -290,7 +290,7 @@ this.accessNative({ name: "getLocateInfo", params: { isMap: true } })
   .catch(err => {});
 
 // 不显示地图，后台定位当前位置
-this.accessNative({ name: "getLocateInfo" })
+this.$h.accessNative({ name: "getLocateInfo" })
   .then(res => {
      /*
         "city" : 城市,
