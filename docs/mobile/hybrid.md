@@ -34,7 +34,7 @@ this.$h.isNative
 
 ## apiready
 
-此事件是在 api 对象准备完毕后产生，在每个 web 模块中代码中都需要监听此事件，以确定 APICloud 扩展对象已经准备完毕，可以调用了。如 sessionId、权限、数据字典此类数据，都可在这个方法中获取，并存储到 store 中，以供 web 模块使用。若是给apiready方法传了store参数，hybrid将在store中注册一个store模块（默认模块名称为userInfo），用以管理公共数据。公共数据的存储key为UserInfo。
+此事件是在 api 对象准备完毕后产生，在每个 web 模块中代码中都需要监听此事件，以确定 APICloud 扩展对象已经准备完毕，可以调用了。如 sessionId、权限、数据字典此类数据，都可在这个方法中获取，并存储到 store 中，以供 web 模块使用。若是给apiready方法传了store参数，hybrid将在store中注册一个store模块（默认模块名称为userInfo），用以管理公共数据。公共数据的存储key为UserInfo。取值：store.state.userInfo.userInfo
 
 ```js
 /* 使用 */

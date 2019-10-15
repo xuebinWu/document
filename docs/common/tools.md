@@ -10,7 +10,7 @@
 
 - eslint
 - prettier
-- stylelint
+- stylelint-stzhang
 - Auto Close Tag
 - Auto Import
 - Auto Rename Tag
@@ -24,27 +24,29 @@
 
 ```json
 {
-  "editor.formatOnType": true,
-  "editor.formatOnSave": true,
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    {
-      "language": "html",
-      "autoFix": true
-    },
+    "html",
     {
       "language": "vue",
       "autoFix": true
+    },
+    {
+        "language": "typescript",
+        "autoFix": true
+    },
+    {
+        "language": "typescriptreact",
+        "autoFix": true
     }
   ],
-  "explorer.confirmDragAndDrop": false,
-  "fileheader.customMade": {
-    "Author": "你的姓名",
-    "Date": "Do not edit",
-    "Description": "file content"
-  }
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "stylelint.autoFix": true
 }
 ```
 
