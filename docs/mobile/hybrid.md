@@ -10,6 +10,10 @@
 由于api属性是异步注入到页面中的，所以即使页面已经渲染完了，也有可能拿不到api对象。模板项目里边，在main.js中已经做了基础的处理，在hybrid.apiready触发回调函数时，才会挂载页面dom。在编写代码时，要注意在main.js中，不要出现立即执行api的代码，也不要引用立即执行了api代码的文件。参考main.js中引入permission.js的处理。
 :::
 
+## 安装
+
+npm i @zvalley/hybrid-sdk -S
+
 ## 绑定
 
 Hybrid 中封装了会用到的 SuperWebviewSDK 中的方法，便于在 web 页面中使用，也便于后期维护。web 项目初始化时，需将 Hybrid 类的实例绑定到 Vue 上。每个页面中，在通过 this.$h 来调用具体的交互方法。
