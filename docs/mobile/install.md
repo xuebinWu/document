@@ -1,8 +1,3 @@
-<!--
- * @Author: Yu lin Liu
- * @Date: 2019-08-08 14:42:22
- * @Description: file content
- -->
 # 安装包地址
 
 为方便开发人员和测试人员安装应用，将个项目的安装包统一放在此页面。
@@ -50,7 +45,7 @@ TODO
 
 ### iOS
 
-TODO
+<img :src="$withBase('/wisdom_app.png')" alt="安装二维码">
 
 ### Android
 

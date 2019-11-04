@@ -12,25 +12,6 @@
 
 <img :src="$withBase('/jiagou.png')" alt="移动端架构图">
 
-## 调试
-
-web 模块集成 vconsole 作线上调试
-
-```js
-if (process.env.NODE_ENV !== "production") {
-  let VConsole = require("vconsole/dist/vconsole.min");
-  new VConsole();
-}
-```
-
-当需要集成到手机 APP 进行调试时，扫下面二维码，安装 APP，输入相应域名进行调试。
-::: tip
-支持连接电脑 IP 进行调试，此时手机和电脑需在同一 WiFi 下。
-:::
-
-二维码还在制作中... 🙂
-
-###
 
 ## web UI 组件库
 

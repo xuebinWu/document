@@ -82,6 +82,7 @@ module.exports = {
         children: [
           ["/mobile/", "指南"],
           ["/mobile/fit", "适配"],
+          ["/mobile/debug", "调试"],
           ["/mobile/hybrid", "Hybrid使用"],
           ["/mobile/modules", "公共模块"],
           ["/mobile/prepare", "开发准备"],
@@ -91,6 +92,15 @@ module.exports = {
       {
         title: "PC端",
         children: [["/PC/", "指南"]]
+      },
+      {
+        title: "调试经验总结",
+        children: [
+          ["/experience/", "指南"],
+          ["/experience/mobile", "移动端"],
+          ["/experience/pc", "PC端"],
+          ["/experience/hybrid", "Hybrid"]
+        ]
       }
     ]
   },
