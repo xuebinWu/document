@@ -12,7 +12,9 @@
 
 ## 安装
 
+```sh
 npm i @zvalley/hybrid-sdk -S
+```
 
 ## 绑定
 
@@ -253,7 +255,7 @@ this.$h
   .catch(err => {});
 
 // 拍照， 直接调起相机
-this.accessNative({ name: "takeCamera", params })
+this.$h.accessNative({ name: "takeCamera", params })
   .then(res => {
     /*
      * 返回结果
@@ -405,6 +407,128 @@ showCallMenu({ code = '+86', showDingCall = true, phoneNumber = '' } = {}) {
     api.call({
       type: 'tel_prompt',
       number: phoneNumber
+    })
+}
+```
+
+## 缓存
+
+### 获取缓存大小
+
+```js
+/* 使用 */
+
+this.$h.getCacheSize().then(size => {});
+```
+
+```js
+/* Hybrid */
+
+getCacheSize() {
+    return new Promise((resolve, reject) => {
+      api.getCacheSize(ret => {
+        let size = ret.size
+        if(size < 0){
+          switch(size){
+            case -3 : api.toast({ msg: '无法访问存储设备' }); break;
+            case -2 : api.toast({ msg: '正在准备USB存储设备' }); break;
+            case -1 : api.toast({ msg: '无存储设备' }); break;
+            default : break;
+          }
+          reject(size)                    
+        } else {
+          size = parseInt((size / 1024 / 1024) * 100) / 100
+          resolve(size)
+        }
+      })
+    })
+}
+```
+
+### 清除缓存
+
+```js
+/* 使用 */
+
+this.$h.clearCache().then(() => {});
+```
+
+```js
+/* Hybrid */
+
+clearCache() {
+    return new Promise((resolve, reject) => {
+      api.showProgress()
+      api.clearCache(function() {
+        api.hideProgress()
+        api.toast({ msg: '清除完成' })
+        resolve()
+      })
+    })
+}
+```
+
+## 应用的基础信息
+
+```js
+/* 使用 */
+
+this.$h.getAppInfo()
+```
+
+```js
+/* Hybrid */
+
+getAppInfo() {
+    // 应用在桌面显示名称，字符串类型
+    const appName = api.appName
+
+    // 应用版本号，字符串类型
+    const appVersion = api.appVersion
+
+    // 系统类型，字符串类型
+    /**
+     * ios            //iOS系统
+     * android        //Android系统
+     * win            //Windows系统
+     * wp             //Windows Phone系统
+     */
+    const systemType = api.systemType // 比如： ios
+
+    // 手机平台的系统版本，字符串类型
+    const systemVersion = api.systemVersion;  // 比如： 8.0
+
+    return {
+      appName,
+      appVersion,
+      systemType,
+      systemVersion
+    }
+}
+```
+
+## deviceToken
+```js
+/* 使用 */
+
+this.$h.getDeviceToken().then(res => {})
+```
+
+```js
+/* Hybrid */
+
+getDeviceToken() {
+    return new Promise((resolve, reject) => {
+      api.accessNative(
+        { name: 'getDeviceToken' },
+        function(ret, err) {
+          if (ret) {
+            resolve(ret.deviceToken)
+          } else {
+            reject('0')
+          }
+        }
+      )
     })
 }
 ```
