@@ -92,7 +92,14 @@ module.exports = {
       },
       {
         title: "PC端",
-        children: [["/PC/", "指南"]]
+        children: [
+          ["/PC/", "指南"],
+          ["/PC/config", "全局配置"],
+          ["/PC/process", "环境变量配置"],
+          ["/PC/directives", "全局指令"],
+          ["/PC/plugin", "全局插件"],
+          ["/PC/layout", "全局布局组件"]
+        ]
       },
       {
         title: "调试经验总结",
