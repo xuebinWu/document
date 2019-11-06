@@ -7,11 +7,11 @@ actionLink: /common/
 features:
 
 - title: 愿景
-  details: 帮你快速开始一个项目，你和你的成员只需要专注于业务逻辑，并且高频率的复用 UI 库中的组件
+  details: 统一前端编码规范，降低开发和维护成本。让新成员快速进入开发角色。
 - title: 技术栈
   details: Vue 全家桶、 element-ui、 vant
-- title: 编程思想
-  details: 高内聚低耦合、封装
+- title: 规范约束工具
+  details: eslint、prettier、stylelint
   footer: Copyright © 2019 - 刘宇琳
 
 ---

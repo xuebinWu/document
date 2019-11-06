@@ -6,7 +6,9 @@
 
 # 开发工具配置
 
-## 部分 VSCode 插件
+## VSCode 设置
+
+### 部分 VSCode 插件
 
 - eslint
 - prettier

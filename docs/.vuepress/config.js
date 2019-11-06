@@ -49,8 +49,8 @@ module.exports = {
     editLinks: true,
     editLinkText: "改善此页面！",
     nav: [
-      { text: "首页", link: "/" },
       { text: "指南", link: "/common/" },
+      { text: "工程模板", link: "https://github.com/122687220/web-template" },
       { text: "ZvUI", link: "http://zvui.lhanyun.com" },
       { text: "ZvUI__PC", link: "https://1934266584.github.io/pc_document/" }
     ],
@@ -72,6 +72,7 @@ module.exports = {
           ["/common/svg", "图标"],
           ["/common/optimize", "优化"],
           ["/common/cli", "脚手架"],
+          ["/common/skeleton", "骨架屏"],
           ["/common/code-review", "Code Review"],
           ["/common/version", "版本管理"],
           ["/common/tools", "开发工具配置"]

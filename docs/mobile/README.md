@@ -12,6 +12,10 @@
 
 <img :src="$withBase('/jiagou.png')" alt="移动端架构图">
 
+## 逻辑图
+
+<img :src="$withBase('/mobile.png')" alt="移动端架构图">
+
 
 ## web UI 组件库
 
