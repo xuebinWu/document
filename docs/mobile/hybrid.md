@@ -384,7 +384,7 @@ this.$h.accessNative({
     isShow: " ",
     // web页面显示时，是否隐藏导航栏左侧按钮。默认不隐藏 ( 非必传 )
     // 可选值 0:不隐藏； 1: 隐藏
-    isHiddenRigthBtn: " "
+    isHiddenLeftBtn: " "
   }
 });
 ```
