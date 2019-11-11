@@ -110,7 +110,9 @@ store.registerModule('userInfo', {
 })
 ```
 
-## 打开新的 web 模块
+## 打开新的 web 模块 
+
+### openFrame
 
 项目约定，每个 web 模块，用一个新的 frame 承载。当需要跳转到下一 web 模块时，调用 openFrame 方法。url 可以为远程地址，也可以为本地模块资源名称。
 
@@ -171,6 +173,51 @@ openFrame(name, url) {
 // 关闭窗口
 closeFrame(name) {
     api.closeFrame({ name })
+}
+```
+
+### openWin
+
+打开第三方应用
+
+```js
+/* 使用 */
+
+// 打开新win
+this.$h.openWin("app", "http://www.baidu.com");
+
+// 关闭win
+this.$h.closeWin("app");
+```
+
+```js
+/* Hybrid */
+
+openWin(name, url, pageParam = {}) {
+  api.accessNative({ name: 'startLoadFrame', extra: { name } })
+
+  api.openWin({
+    name,
+    url,
+    bounces: false,
+    animation: {
+      type: 'movein', //动画类型（详见动画类型常量）
+      subType: 'from_bottom', //动画子类型（详见动画子类型常量）
+      duration: 300
+    },
+    pageParam,
+    bgColor: '#fff',
+    useWKWebView: true,
+    reload: true,
+    progress: {
+      type: 'page'
+    }
+  })
+}
+
+// 关闭窗口
+closeWin(name) {
+  api.closeWin({ name })
 }
 ```
 
@@ -328,7 +375,16 @@ this.$h.accessNative({
     // web页面的访问地址 ( 必传 )
     url: " ",
     // web页面要显示的title ( 非必传 )
-    title: " "
+    title: " ",
+    // web页面显示时，是否隐藏导航栏。默认不隐藏 ( 非必传 )
+    // 可选值 0:不隐藏； 1: 隐藏
+    isHidden: " ",
+    // web页面关闭时，是否显示导航栏。默认不显示 ( 非必传 )
+    // 可选值 0:不显示； 1: 显示
+    isShow: " ",
+    // web页面显示时，是否隐藏导航栏左侧按钮。默认不隐藏 ( 非必传 )
+    // 可选值 0:不隐藏； 1: 隐藏
+    isHiddenRigthBtn: " "
   }
 });
 ```
