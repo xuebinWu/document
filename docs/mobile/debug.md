@@ -34,17 +34,12 @@ serve dist
 ```
 
 ::: tip
-serve dist -l xxx 指定服务的端口号 ，例如： serve dist -l 8080
+serve dist -l xxx 指定服务的端口号 ，例如： serve dist -l 8080，更多的使用方法参考[serve](https://github.com/zeit/serve)文档
 :::
 
 ## 调试APP
 
-为方便开发人员能够在真实的环境中进行调试，开发了一个专门用来调试的APP，Android和iOS手机可以通过扫描下方二维码进行安装。此APP中集成了移动端所需的所有开发环境和依赖。
+为方便开发人员能够在真实的环境中进行调试，开发了一个专门用来调试的APP，Android和iOS手机可以通过扫描下方二维码进行安装。此APP中集成了移动端所需的所有开发环境和依赖。安装密码：123456
 
-<img :src="$withBase('/develop.png')" alt="安装二维码">
-
-::: tip
-在URL中输入需访问的IP，点击 Click Me! 便可以访问到页面了
-:::
-<img :src="$withBase('/debug.jpg')" width="200px" alt="安装二维码">
+<img :src="$withBase('/debug.png')" alt="安装二维码">
 

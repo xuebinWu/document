@@ -83,6 +83,7 @@ module.exports = {
         children: [
           ["/mobile/", "指南"],
           ["/mobile/fit", "适配"],
+          ["/mobile/route-cache", "路由缓存"],
           ["/mobile/debug", "调试"],
           ["/mobile/hybrid", "Hybrid使用"],
           ["/mobile/modules", "公共模块"],

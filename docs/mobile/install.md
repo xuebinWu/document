@@ -7,14 +7,14 @@
 :::
 
 ::: warning 注意
-若无特殊说明，iOS和Android都是扫同一个二维码进行安装。
+若无特殊说明，iOS和Android都是扫同一个二维码进行安装。安装密码为 123456
 :::
 
 ## 中联 e 管家
 
-### iOS
+### iOS (预生产)
 
-TODO
+<img :src="$withBase('/serviceapp_pre.png')" alt="安装二维码">
 
 ### Android
 
@@ -52,7 +52,8 @@ TODO
 
 ## 农机
 
-### 测试环境
-<img :src="$withBase('/fram_test.png')" alt="安装二维码">
+### 
+
+<img :src="$withBase('/emanage_dev.png')" alt="安装二维码">
 
 
