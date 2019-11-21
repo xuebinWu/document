@@ -1,6 +1,6 @@
 # 安装包地址
 
-为方便开发人员和测试人员安装应用，将个项目的安装包统一放在此页面。
+为方便开发人员、测试人员和项目经理安装应用，将个项目的安装包的二维码统一放在此页面。
 
 ::: tip
 此页面只维护测试环境和预生产环境的安装包二维码，生产环境的安装包二维码请找各项目的项目经理。
@@ -12,15 +12,11 @@
 
 ## 中联 e 管家
 
-### iOS (预生产)
+### 预生产
 
 <img :src="$withBase('/serviceapp_pre.png')" alt="安装二维码">
 
-### Android
-
-TODO
-
-## 中联 e 管家（消防版）
+## 中联 e 管家(消防版)
 
 ### iOS
 
@@ -29,12 +25,18 @@ TODO
 ### Android
 
 TODO
+
+## 中联 e 管家(英文版)
+
+### 测试环境
+
+<img :src="$withBase('/emanage_en.png')" alt="安装二维码">
 
 ## 全生命周期管理平台
 
-### iOS
+### iOS(预生产)
 
-TODO
+<img :src="$withBase('/lifemanage.png')" alt="安装二维码">
 
 ### Android
 
@@ -52,8 +54,6 @@ TODO
 
 ## 农机
 
-### 
+### 测试环境
 
 <img :src="$withBase('/emanage_dev.png')" alt="安装二维码">
-
-
