@@ -7,10 +7,15 @@
 :::
 
 ::: warning 注意
-若无特殊说明，iOS和Android都是扫同一个二维码进行安装。安装密码为 123456
+若无特殊说明，iOS和Android都是扫同一个二维码进行安装。安装密码为 123456。
+如果发现扫描二维码无法安装到最新的版本，请确认电脑已连接外网，等待更新提示。
 :::
 
 ## 中联 e 管家
+
+### Android(测试环境)
+
+<img :src="$withBase('/serviceapp_dev.png')" alt="安装二维码">
 
 ### 预生产
 
@@ -57,3 +62,7 @@ TODO
 ### 测试环境
 
 <img :src="$withBase('/emanage_dev.png')" alt="安装二维码">
+
+### 预生产
+
+<img :src="$withBase('/emanage_pre.png')" alt="安装二维码">
