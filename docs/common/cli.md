@@ -52,11 +52,17 @@ zv init
 - PC端： PC端门户项目，集成了element-ui、ZvUI__pc、国际化、布局组件及自动化代码规范和代码风格检查；
 - 多页应用： 一般的多页面项目，无可配项；
 
+### 添加对应的物料到项目中
+zv block
+
+notice:对应的物料仓库component和view都需要用文件夹包裹
+
 ## 特性
 
 - [模板项目](https://github.com/122687220/web-template)
 
+- [物料仓库项目](http://gitlab.zoomlion.com/po_web/materials.git)
+
 ## TODO
 
 - 将所有模板合并成一个，通过cli配置，生成不同的模板；
-- 整理物料仓库，统一通过cli进行安装；
