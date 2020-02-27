@@ -3,7 +3,7 @@
  * @Date: 2019-07-26 07:53:53
  * @Description: file content
  -->
-# zvalley-cli
+# zvalley-cli (目前相关的模版依赖于vue-cli@4)
 
 ::: warning 注意
 由于此包上传在私有仓库中，安装前，请切换 npm 源。否则会安装失败。
@@ -45,12 +45,25 @@ zv init
 ```
 
 ### 模板
+选择不同的选项项按照配置注入不同的配置
 
-- 默认模板：一般的PC端项目，集成了element-ui及自动化代码规范和代码风格检查，可选配ZvUI__pc、国际化；
-- 移动端：一般的移动端端项目，集成了vant及自动化代码规范和代码风格检查，可选配ZvUI、国际化；
-- 移动端-门户开发： 移动端门户项目，集成了vant、ZvUI、国际化及自动化代码规范和代码风格检查；
-- PC端： PC端门户项目，集成了element-ui、ZvUI__pc、国际化、布局组件及自动化代码规范和代码风格检查；
-- 多页应用： 一般的多页面项目，无可配项；
+当前的配置项有(以下配置项都是SPA)
+- PC端
+- H5(手机端)
+- hybrid(混合开发)
+- 小程序开发(uni-app)
+- vue插件开发模版
+
+并根据一些配置询问项来动态导入相关的模块（如：国际化，换肤，是否导入不同端的依赖组件库）
+
+:::notice
+
+小程序开发(uni-app)和vue插件开发模版 这两个选项不会有后续的是否配置国际化，换肤，是否导入组件库等问题影响，因为是完全独立的内容
+
+::: 
+
+具体的模块使用请参考对应的文档
+
 
 ### 添加对应的物料到项目中
 zv block
@@ -63,6 +76,7 @@ notice:对应的物料仓库component和view都需要用文件夹包裹
 
 - [物料仓库项目](http://gitlab.zoomlion.com/po_web/materials.git)
 
-## TODO
+- [小程序开发(uni-app)](http://gitlab.zoomlion.com/po_web/miniprograms-template)
 
-- 将所有模板合并成一个，通过cli配置，生成不同的模板；
+- [vue插件开发模版](http://gitlab.zoomlion.com/po_web/vue-plugin-template)
+
