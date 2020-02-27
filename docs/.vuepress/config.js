@@ -75,6 +75,8 @@ module.exports = {
           ["/common/skeleton", "骨架屏"],
           ["/common/code-review", "Code Review"],
           ["/common/version", "版本管理"],
+          ["/common/themeReplace", "主题换肤"],
+          ["/common/vue-plugin", "vue插件模版"],
           ["/common/tools", "开发工具配置"]
         ]
       },
@@ -89,6 +91,12 @@ module.exports = {
           ["/mobile/modules", "公共模块"],
           ["/mobile/prepare", "开发准备"],
           ["/mobile/install", "安装包地址"]
+        ]
+      },
+      {
+        title: "小程序",
+        children: [
+          ["/miniprogrammer/", "指南"],
         ]
       },
       {
