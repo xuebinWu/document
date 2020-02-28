@@ -96,7 +96,10 @@ module.exports = {
       {
         title: "小程序",
         children: [
-          ["/miniprogrammer/", "指南"],
+          ["/miniprogramme/", "指南"],
+          ["/miniprogramme/constructor", "项目结构说明"],
+          ["/miniprogramme/request", "网络请求"],
+          ["/miniprogramme/components", "组件介绍"]
         ]
       },
       {

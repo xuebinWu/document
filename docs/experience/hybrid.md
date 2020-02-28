@@ -22,3 +22,7 @@
 
 ### 模块首页中，$h/hybrid方法不生效
 可以在this.$nextTick中，进行方法的调用
+
+### 在hybrid情况下第一次进入页面没有走router.beforeEach函数
+
+排查发现，当permission在api.ready函数中注入时,写的函数push到beforeEach 函数队列的时，第一个页面渲染时已经调用过一次beforeEach（此时为空的函数队列）。解决办法将 导入提前到router注入到vue实例之前。
