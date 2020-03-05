@@ -70,7 +70,10 @@
 1. 填写默认用户信息-全名
 2. 设置项目目录 （之后使用sourceTree创建的项目，默认都会放在这个目录下面）
 
+### 提交变更
+<img :src="$withBase('/sourceTree_mac.png')" alt="组件">
+<img :src="$withBase('/sourceTree_windows.png')" alt="组件">
 
 ## PxCook
 
-高效易用的自动标注工具, 生成前端代码, 设计研发协作利器。[下载地址](https://www.fancynode.com.cn/pxcook)。使用PxCook读取UI提供的psd文件。
+高效易用的自动标注工具, 生成前端代码, 设计研发协作利器。[下载地址](https://www.fancynode.com.cn/pxcook)。使用PxCook读取UI提供的psd文件
