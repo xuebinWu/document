@@ -59,7 +59,8 @@ module.exports = {
         title: "通用文档",
         children: [
           ["/common/", "指南"],
-          ["/common/standard", "编码规范"],
+          ["/common/standard", "通用书写规范"],
+          ["/common/html", "HTML规范"],
           ["/common/style", "风格指南"],
           ["/common/directory", "目录结构"],
           ["/common/env", "环境编译"],
