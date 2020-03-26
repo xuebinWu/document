@@ -8,8 +8,10 @@
 - Windows系统 文件 -> 首选项 -> 用户代码片段
 
 ### 设置通用模板
+
 - 在出现的框中输入vue之后按回车键
 - 在出现的vue.json文件中写入以下代码
+
 ```json
 "Print to console": {
   "prefix": "vue",
@@ -45,6 +47,7 @@
 ```
 
 ### 设置个性模板
+
 ::: tip
 自定义模板时，输入框中可以输入任意字符，prefix字段是定义触发代码片段的字符串。
 :::
@@ -54,6 +57,7 @@
 - 选择”新建全局代码片段文件“
 - 在出现的框中输入vuem之后按回车键
 - 在出现的vuem.code-snippets文件中写入以下代码
+
 ```json
 "Print to console": {
     "prefix": "vuem",

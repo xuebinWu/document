@@ -1,10 +1,4 @@
-<!--
- * @Author: Yu lin Liu
- * @Date: 2019-07-25 16:28:31
- * @Description: file content
- -->
-
-# Hybrid 类的使用
+# hybrid-sdk 的使用
 
 ::: warning 注意
 由于api属性是异步注入到页面中的，所以即使页面已经渲染完了，也有可能拿不到api对象。模板项目里边，在main.js中已经做了基础的处理，在hybrid.apiready触发回调函数时，才会挂载页面dom。在编写代码时，要注意在main.js中，不要出现立即执行api的代码，也不要引用立即执行了api代码的文件。参考main.js中引入permission.js的处理。
@@ -13,19 +7,19 @@
 ## 安装
 
 ```sh
-npm i @zvalley/hybrid-sdk -S
+npm i @zvalley/hybrid-sdk@beta -S
 ```
 
 ## 绑定
 
-Hybrid 中封装了会用到的 SuperWebviewSDK 中的方法，便于在 web 页面中使用，也便于后期维护。web 项目初始化时，需将 Hybrid 类的实例绑定到 Vue 上。每个页面中，在通过 this.$h 来调用具体的交互方法。
+hybrid-sdk中封装了会用到的 SuperWebviewSDK 中的方法，便于在 web 页面中使用，也便于后期维护。web 项目初始化时，需将 hybrid-sdk 的实例绑定到 Vue 上。每个页面中，在通过 this.$h 来调用具体的交互方法。
 
 ::: warning 注意
-对于未封装在 Hybrid 类中的方法，如需使用，请告知项目前端管理人员，参照已封装的方法的书写规范，由专人将需要的方法封装到 Hybrid 类中，并更新文档。
+对于未封装在 hybrid-sdk 中的方法，如需使用，请告知项目前端管理人员，参照已封装的方法的书写规范，由专人将需要的方法封装到 hybrid-sdk 中，并更新文档。
 :::
 
 ```js
-// 将 Hybrid 类实例绑定到Vue上
+// 将 hybrid-sdk 实例绑定到Vue上
 // 目前 options 只支持 baseColor (基础色)属性的设置 { baseColor: '#777777' }
 const hybrid = new Hybrid({ options });
 Vue.prototype.$h = hybrid.apiCloud;
@@ -34,7 +28,6 @@ Vue.prototype.$h = hybrid.apiCloud;
 ## isNative
 
 此属性用来判断当前是否是真机环境。若是，则可以正常使用Hybrid
-
 
 ```js
 /* 使用 */

@@ -56,40 +56,42 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: "通用文档",
+        title: "编码规范",
         children: [
           ["/common/", "指南"],
           ["/common/standard", "通用书写规范"],
           ["/common/html", "HTML规范"],
           ["/common/js", "JS规范"],
           ["/common/css", "CSS规范"],
-          ["/common/vue", "Vue"],
+          ["/common/vue", "Vue规范"],
+          ["/common/code-review", "Code Review"],
+          
+        ]
+      },
+      {
+        title: "项目模板",
+        children: [
+          ["/template/", "指南"],
           ["/common/env", "环境编译"],
           ["/common/network", "网络请求"],
           ["/common/permission", "权限控制"],
           ["/common/router", "路由"],
-          ["/common/template", "模板创建"],
-          ["/common/component", "定义组件"],
           ["/common/locale", "国际化"],
           ["/common/svg", "图标"],
-          ["/common/optimize", "优化"],
-          ["/common/cli", "脚手架"],
-          ["/common/skeleton", "骨架屏"],
-          ["/common/code-review", "Code Review"],
-          ["/common/version", "版本管理"],
           ["/common/themeReplace", "主题换肤"],
-          ["/common/vue-plugin", "vue插件模版"],
-          ["/common/tools", "开发工具配置"]
+          ["/mobile/fit", "适配"],
+          ["/mobile/route-cache", "路由缓存"],
+          ["/common/optimize", "优化"],
+          ["/common/skeleton", "骨架屏"],
         ]
       },
       {
         title: "移动端",
         children: [
           ["/mobile/", "指南"],
-          ["/mobile/fit", "适配"],
-          ["/mobile/route-cache", "路由缓存"],
           ["/mobile/debug", "调试"],
-          ["/mobile/hybrid", "Hybrid使用"],
+          ["/mobile/hybrid1", "hybrid-sdk v1.x"],
+          ["/mobile/hybrid2", "hybrid-sdk v2.x"],
           ["/mobile/modules", "公共模块"],
           ["/mobile/prepare", "开发准备"],
           ["/mobile/install", "安装包地址"]
@@ -113,6 +115,17 @@ module.exports = {
           ["/PC/directives", "全局指令"],
           ["/PC/plugin", "全局插件"],
           ["/PC/layout", "全局布局组件"]
+        ]
+      },
+      {
+        title: "其他",
+        children: [
+          ["/common/component", "定义组件"],
+          ["/common/version", "版本管理"],
+          ["/common/vue-plugin", "vue插件模版"],
+          ["/common/cli", "脚手架"],
+          ["/common/template", "模板创建"],
+          ["/common/tools", "开发工具配置"]
         ]
       },
       {

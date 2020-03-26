@@ -5,6 +5,7 @@
 ### 声明顺序
 
 相关的属性声明应当归为一组，并按照下面的顺序排列：
+
 1.Positioning
 2.Box model
 3.Typographic
