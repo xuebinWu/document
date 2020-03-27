@@ -14,7 +14,7 @@
 
 > 产品部前端开发文档
 
-### 🏠 [Document](https://122687220.github.io/web_doc/)
+### 🏠 [Document](https://122687220.github.io/document/)
 
 ## 运行
 

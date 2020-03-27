@@ -37,6 +37,16 @@ TODO
 
 <img :src="$withBase('/emanage_en.png')" alt="安装二维码">
 
+## 中联 e 管家(泵送视频版)
+
+### 测试环境
+
+<img :src="$withBase('/emanage_video_dev.png')" width="258px" alt="安装二维码">
+
+### 预生产环境
+
+<img :src="$withBase('/emanage_video_pre.png')" width="258px" alt="安装二维码">
+
 ## 全生命周期管理平台
 
 ### iOS(预生产)

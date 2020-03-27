@@ -6,7 +6,7 @@
 module.exports = {
   title: "产品部 · 前端开发文档",
   description: "Just do it",
-  base: "/web_doc/",
+  base: "/document/",
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }], //引入favicon
     ["link", { rel: "manifest", href: "/manifest.json" }],
@@ -72,17 +72,17 @@ module.exports = {
         title: "项目模板",
         children: [
           ["/template/", "指南"],
-          ["/common/env", "环境编译"],
-          ["/common/network", "网络请求"],
-          ["/common/permission", "权限控制"],
-          ["/common/router", "路由"],
-          ["/common/locale", "国际化"],
-          ["/common/svg", "图标"],
-          ["/common/themeReplace", "主题换肤"],
-          ["/mobile/fit", "适配"],
-          ["/mobile/route-cache", "路由缓存"],
-          ["/common/optimize", "优化"],
-          ["/common/skeleton", "骨架屏"],
+          ["/template/env", "环境编译"],
+          ["/template/network", "网络请求"],
+          ["/template/permission", "权限控制"],
+          ["/template/router", "路由"],
+          ["/template/locale", "国际化"],
+          ["/template/svg", "图标"],
+          ["/template/themeReplace", "主题换肤"],
+          ["/template/fit", "适配"],
+          ["/template/route-cache", "路由缓存"],
+          ["/template/optimize", "优化"],
+          ["/template/skeleton", "骨架屏"],
         ]
       },
       {
@@ -93,8 +93,7 @@ module.exports = {
           ["/mobile/hybrid1", "hybrid-sdk v1.x"],
           ["/mobile/hybrid2", "hybrid-sdk v2.x"],
           ["/mobile/modules", "公共模块"],
-          ["/mobile/prepare", "开发准备"],
-          ["/mobile/install", "安装包地址"]
+          ["/mobile/prepare", "开发准备"]
         ]
       },
       {
@@ -120,12 +119,13 @@ module.exports = {
       {
         title: "其他",
         children: [
-          ["/common/component", "定义组件"],
-          ["/common/version", "版本管理"],
-          ["/common/vue-plugin", "vue插件模版"],
-          ["/common/cli", "脚手架"],
-          ["/common/template", "模板创建"],
-          ["/common/tools", "开发工具配置"]
+          ["/other/component", "定义组件"],
+          ["/other/version", "版本管理"],
+          ["/other/vue-plugin", "vue插件模版"],
+          ["/other/cli", "脚手架"],
+          ["/other/template", "模板创建"],
+          ["/other/tools", "开发工具配置"],
+          ["/other/install", "安装包地址"]
         ]
       },
       {
