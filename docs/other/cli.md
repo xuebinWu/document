@@ -1,8 +1,3 @@
-<!--
- * @Author: Yu lin Liu
- * @Date: 2019-07-26 07:53:53
- * @Description: file content
- -->
 # zvalley-cli (目前相关的模版依赖于vue-cli@4)
 
 ::: warning 注意

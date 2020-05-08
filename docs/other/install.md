@@ -13,7 +13,7 @@
 
 ## 中联 e 管家
 
-### Android(测试环境)
+### 测试环境
 
 <img :src="$withBase('/serviceapp_dev.png')" alt="安装二维码">
 

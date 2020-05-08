@@ -1,6 +1,6 @@
 # 前端项目模板
 
-基于Vue-Cli4.x，建立的前端通用项目模板。请先熟悉[Vue-cli4.x](https://cli.vuejs.org/zh/guide/)的文档
+基于Vue-Cli4.x，建立的前端通用项目模板。请先熟悉[Vue-cli4.x](https://cli.vuejs.org/zh/guide/)的文档。模板仓库地址[web-template](https://github.com/122687220/web-template)
 
 ## 目录构建规范
 

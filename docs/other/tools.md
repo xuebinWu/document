@@ -66,11 +66,13 @@
 2. 设置项目目录 （之后使用sourceTree创建的项目，默认都会放在这个目录下面）
 
 ### Mac系统
+
 偏好设置 -> 通用
 1. 填写默认用户信息-全名
 2. 设置项目目录 （之后使用sourceTree创建的项目，默认都会放在这个目录下面）
 
 ### 提交变更
+
 <img :src="$withBase('/sourceTree_mac.png')" alt="组件">
 <img :src="$withBase('/sourceTree_windows.png')" alt="组件">
 

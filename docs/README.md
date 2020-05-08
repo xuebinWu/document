@@ -12,7 +12,8 @@ features:
   details: Vue 全家桶、 element-ui、 vant
 - title: 规范约束工具
   details: eslint、prettier、stylelint
-  footer: Copyright © 2019 - 刘宇琳
+
+footer: Fighting✌ (>‿◠)✌ ☜
 
 ---
 

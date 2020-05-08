@@ -10,9 +10,12 @@ mock 环境: 当后台接口还未完成时，本地模拟数据进行调试。
 debugger 环境: 当需要连接后台电脑调试接口时，将.env.debugger 文件的地址改成对应后台的 IP 地址，开启调试环境编译，进行联调。
 :::
 
-```
+```js
 // 测试环境
 .env.development
+
+// 测试环境（部署）
+.env.dev
 
 // 预生产环境
 .env.prepro
@@ -41,7 +44,7 @@ debugger 环境: 当需要连接后台电脑调试接口时，将.env.debugger �
     "pre": "vue-cli-service build --mode prepro",
 
     // 测试环境编译打包
-    "dev": "vue-cli-service build --mode development",
+    "dev": "vue-cli-service build --mode dev",
 
     // 调试环境编译
     "debugger": "vue-cli-service serve --mode debugger",
@@ -59,10 +62,7 @@ debugger 环境: 当需要连接后台电脑调试接口时，将.env.debugger �
     "analyze": "vue-cli-service build --report",
 
     // svg文件优化
-    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
-
-    // 新建模板页面
-    "new": "plop"
+    "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml"
 }
 
 ```

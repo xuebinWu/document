@@ -4,7 +4,7 @@
  * @Description: file content
  */
 module.exports = {
-  title: "产品部 · 前端开发文档",
+  title: "前端开发文档",
   description: "Just do it",
   base: "/document/",
   head: [
@@ -50,12 +50,27 @@ module.exports = {
     editLinkText: "改善此页面！",
     nav: [
       { text: "指南", link: "/common/" },
-      { text: "工程模板", link: "https://github.com/122687220/web-template" },
-      { text: "ZvUI", link: "http://zvui.lhanyun.com" },
-      { text: "ZvUI__PC", link: "https://1934266584.github.io/pc_document/" }
+      { text: "工程模板", link: "/template/" },
+      { 
+        text: "组件库", 
+        items: [
+          { text: 'ZvUI', link: 'https://122687220.github.io/zv-ui/' },
+          { text: 'ZvUI__PC', link: 'https://1934266584.github.io/pc_document/' }
+        ]
+      },
+      { 
+        text: "端开发", 
+        items: [
+          { text: '移动端', link: '/mobile/' },
+          { text: 'PC端', link: '/PC/' },
+          { text: '小程序', link: '/miniprogramme/' }
+        ]
+      },
+      { text: "知识库", link: "/experience/" },
+      { text: "工程化相关", link: "/other/" }
     ],
-    sidebar: [
-      {
+    sidebar: {
+      '/common/': [{
         title: "编码规范",
         children: [
           ["/common/", "指南"],
@@ -65,13 +80,13 @@ module.exports = {
           ["/common/css", "CSS规范"],
           ["/common/vue", "Vue规范"],
           ["/common/code-review", "Code Review"],
-          
         ]
-      },
-      {
+      }],
+      '/template/': [{
         title: "项目模板",
         children: [
           ["/template/", "指南"],
+          ["/template/join-up", "接入"],
           ["/template/env", "环境编译"],
           ["/template/network", "网络请求"],
           ["/template/permission", "权限控制"],
@@ -84,8 +99,8 @@ module.exports = {
           ["/template/optimize", "优化"],
           ["/template/skeleton", "骨架屏"],
         ]
-      },
-      {
+      }],
+      '/mobile/': [{
         title: "移动端",
         children: [
           ["/mobile/", "指南"],
@@ -95,8 +110,8 @@ module.exports = {
           ["/mobile/modules", "公共模块"],
           ["/mobile/prepare", "开发准备"]
         ]
-      },
-      {
+      }],
+      '/miniprogramme/': [{
         title: "小程序",
         children: [
           ["/miniprogramme/", "指南"],
@@ -104,8 +119,8 @@ module.exports = {
           ["/miniprogramme/request", "网络请求"],
           ["/miniprogramme/components", "组件介绍"]
         ]
-      },
-      {
+      }],
+      '/PC/': [{
         title: "PC端",
         children: [
           ["/PC/", "指南"],
@@ -115,8 +130,8 @@ module.exports = {
           ["/PC/plugin", "全局插件"],
           ["/PC/layout", "全局布局组件"]
         ]
-      },
-      {
+      }],
+      '/other/': [{
         title: "其他",
         children: [
           ["/other/component", "定义组件"],
@@ -127,17 +142,17 @@ module.exports = {
           ["/other/tools", "开发工具配置"],
           ["/other/install", "安装包地址"]
         ]
-      },
-      {
-        title: "调试经验总结",
+      }],
+      '/experience/': [{
+        title: "知识库",
         children: [
           ["/experience/", "指南"],
           ["/experience/mobile", "移动端"],
           ["/experience/pc", "PC端"],
           ["/experience/hybrid", "Hybrid"]
         ]
-      }
-    ]
+      }]
+    }
   },
   plugins: [
     [
