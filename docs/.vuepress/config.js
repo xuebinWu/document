@@ -79,6 +79,8 @@ module.exports = {
           ["/common/js", "JS规范"],
           ["/common/css", "CSS规范"],
           ["/common/vue", "Vue规范"],
+          ["/common/git-commit", "Git提交日志规范"],
+          ["/common/git-flow", "Git分支策略"],
           ["/common/code-review", "Code Review"],
         ]
       }],
