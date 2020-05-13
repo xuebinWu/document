@@ -221,7 +221,11 @@ export default {
 <my-component foo="a" bar="b" baz="c" />
 
 <!-- good -->
-<my-component foo="a" bar="b" baz="c" />
+<my-component
+  foo="a"
+  bar="b"
+  baz="c"
+/>
 ```
 
 ## 指令缩写
