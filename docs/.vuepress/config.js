@@ -151,7 +151,8 @@ module.exports = {
           ["/experience/", "指南"],
           ["/experience/mobile", "移动端"],
           ["/experience/pc", "PC端"],
-          ["/experience/hybrid", "Hybrid"]
+          ["/experience/hybrid", "Hybrid"],
+          ["/experience/miniprogrammer", "小程序"]
         ]
       }]
     }
