@@ -55,7 +55,7 @@ module.exports = {
         text: "组件库", 
         items: [
           { text: 'ZvUI', link: 'https://122687220.github.io/zv-ui/' },
-          { text: 'ZvUI__PC', link: 'https://1934266584.github.io/pc_document/' }
+          { text: 'FineUI', link: 'https://122687220.github.io/fine-ui/' }
         ]
       },
       { 
