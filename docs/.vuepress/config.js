@@ -90,6 +90,7 @@ module.exports = {
           ["/template/", "指南"],
           ["/template/join-up", "接入"],
           ["/template/env", "环境编译"],
+          ["/template/component", "组件使用"],
           ["/template/network", "网络请求"],
           ["/template/permission", "权限控制"],
           ["/template/router", "路由"],
