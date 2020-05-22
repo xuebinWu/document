@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目目录结构 | 前端开发文档</title>
+    <meta name="description" content="Just do it">
+    <link rel="icon" href="/document/favicon.ico">
+  <link rel="manifest" href="/document/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/document/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/document/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/document/assets/css/0.styles.b6ddce4f.css" as="style"><link rel="preload" href="/document/assets/js/app.11bfe46c.js" as="script"><link rel="preload" href="/document/assets/js/2.9124a432.js" as="script"><link rel="preload" href="/document/assets/js/15.a75e7064.js" as="script"><link rel="prefetch" href="/document/assets/js/10.bc4a8582.js"><link rel="prefetch" href="/document/assets/js/11.d04213b8.js"><link rel="prefetch" href="/document/assets/js/12.3ed00703.js"><link rel="prefetch" href="/document/assets/js/13.c7529a8f.js"><link rel="prefetch" href="/document/assets/js/14.0b16b6be.js"><link rel="prefetch" href="/document/assets/js/16.48508413.js"><link rel="prefetch" href="/document/assets/js/17.9e041e6c.js"><link rel="prefetch" href="/document/assets/js/18.1960fbda.js"><link rel="prefetch" href="/document/assets/js/19.b8279340.js"><link rel="prefetch" href="/document/assets/js/20.b2e11144.js"><link rel="prefetch" href="/document/assets/js/21.52efd26e.js"><link rel="prefetch" href="/document/assets/js/22.ea2de4d3.js"><link rel="prefetch" href="/document/assets/js/23.805e49c5.js"><link rel="prefetch" href="/document/assets/js/24.acedacf2.js"><link rel="prefetch" href="/document/assets/js/25.b817f5aa.js"><link rel="prefetch" href="/document/assets/js/26.55aaea3d.js"><link rel="prefetch" href="/document/assets/js/27.50a90cf1.js"><link rel="prefetch" href="/document/assets/js/28.c956c552.js"><link rel="prefetch" href="/document/assets/js/29.e2848b02.js"><link rel="prefetch" href="/document/assets/js/3.ce51a7f6.js"><link rel="prefetch" href="/document/assets/js/30.dba80749.js"><link rel="prefetch" href="/document/assets/js/31.f411745a.js"><link rel="prefetch" href="/document/assets/js/32.906e4c42.js"><link rel="prefetch" href="/document/assets/js/33.938d8e39.js"><link rel="prefetch" href="/document/assets/js/34.73e9fcb3.js"><link rel="prefetch" href="/document/assets/js/35.9e8f72e7.js"><link rel="prefetch" href="/document/assets/js/36.62e66f83.js"><link rel="prefetch" href="/document/assets/js/37.de5dda7d.js"><link rel="prefetch" href="/document/assets/js/38.86f97598.js"><link rel="prefetch" href="/document/assets/js/39.21e8697b.js"><link rel="prefetch" href="/document/assets/js/4.f6eb3884.js"><link rel="prefetch" href="/document/assets/js/40.a3d783bc.js"><link rel="prefetch" href="/document/assets/js/41.a83b58d4.js"><link rel="prefetch" href="/document/assets/js/42.40805dc4.js"><link rel="prefetch" href="/document/assets/js/43.20de0011.js"><link rel="prefetch" href="/document/assets/js/44.c089b71c.js"><link rel="prefetch" href="/document/assets/js/45.e1cde9f4.js"><link rel="prefetch" href="/document/assets/js/46.8c0bcc46.js"><link rel="prefetch" href="/document/assets/js/47.e5417872.js"><link rel="prefetch" href="/document/assets/js/48.5000993e.js"><link rel="prefetch" href="/document/assets/js/49.2a36dcf6.js"><link rel="prefetch" href="/document/assets/js/5.3aa9caae.js"><link rel="prefetch" href="/document/assets/js/50.a41ea630.js"><link rel="prefetch" href="/document/assets/js/51.dbb672dc.js"><link rel="prefetch" href="/document/assets/js/52.f74b3aea.js"><link rel="prefetch" href="/document/assets/js/53.9dd7ba09.js"><link rel="prefetch" href="/document/assets/js/54.c4290dad.js"><link rel="prefetch" href="/document/assets/js/55.f0ef3f0b.js"><link rel="prefetch" href="/document/assets/js/56.5a4882ed.js"><link rel="prefetch" href="/document/assets/js/57.f25760ff.js"><link rel="prefetch" href="/document/assets/js/58.3f391cd7.js"><link rel="prefetch" href="/document/assets/js/59.29265aae.js"><link rel="prefetch" href="/document/assets/js/6.2c676f3d.js"><link rel="prefetch" href="/document/assets/js/60.86647961.js"><link rel="prefetch" href="/document/assets/js/61.18fe319b.js"><link rel="prefetch" href="/document/assets/js/7.b0ade46c.js"><link rel="prefetch" href="/document/assets/js/8.6f19a53a.js"><link rel="prefetch" href="/document/assets/js/9.5e1ff4de.js">
+    <link rel="stylesheet" href="/document/assets/css/0.styles.b6ddce4f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/document/" class="home-link router-link-active"><!----> <span class="site-name">前端开发文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/document/common/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="/document/template/" class="nav-link">工程模板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">组件库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://122687220.github.io/zv-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ZvUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://122687220.github.io/fine-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  FineUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">端开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/document/mobile/" class="nav-link">移动端</a></li><li class="dropdown-item"><!----> <a href="/document/PC/" class="nav-link">PC端</a></li><li class="dropdown-item"><!----> <a href="/document/miniprogramme/" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/document/experience/" class="nav-link">知识库</a></div><div class="nav-item"><a href="/document/other/" class="nav-link">工程化相关</a></div> <a href="https://github.com/122687220/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/document/common/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="/document/template/" class="nav-link">工程模板</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">组件库</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://122687220.github.io/zv-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  ZvUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://122687220.github.io/fine-ui/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  FineUI
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">端开发</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/document/mobile/" class="nav-link">移动端</a></li><li class="dropdown-item"><!----> <a href="/document/PC/" class="nav-link">PC端</a></li><li class="dropdown-item"><!----> <a href="/document/miniprogramme/" class="nav-link">小程序</a></li></ul></div></div><div class="nav-item"><a href="/document/experience/" class="nav-link">知识库</a></div><div class="nav-item"><a href="/document/other/" class="nav-link">工程化相关</a></div> <a href="https://github.com/122687220/document" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>编码规范</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/document/common/" class="sidebar-link">指南</a></li><li><a href="/document/common/standard.html" class="sidebar-link">通用书写规范</a></li><li><a href="/document/common/html.html" class="sidebar-link">HTML规范</a></li><li><a href="/document/common/js.html" class="sidebar-link">JS规范</a></li><li><a href="/document/common/css.html" class="sidebar-link">CSS规范</a></li><li><a href="/document/common/vue.html" class="sidebar-link">Vue规范</a></li><li><a href="/document/common/git-commit.html" class="sidebar-link">Git提交日志规范</a></li><li><a href="/document/common/git-flow.html" class="sidebar-link">Git分支策略</a></li><li><a href="/document/common/code-review.html" class="sidebar-link">Code Review</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="项目目录结构"><a href="#项目目录结构" aria-hidden="true" class="header-anchor">#</a> 项目目录结构</h1> <div class="language-text extra-class"><pre class="language-text"><code>.
+├── src
+│   ├── api
+│   │   └── test.js                api接口调用方法文件
+│   ├── assets
+│   │   ├── img                    公共图片存放文件
+│   │   └── styles                 公共样式存放文件
+│   ├── components
+│   │   ├── global                 公共全局组件存放文件
+│   │   ├── index.js               自动将global中的组件挂载到Vue上
+│   ├── icons
+│   │   ├── index.js               自动将svg文件夹中的svg图标引入项目
+│   │   ├── svgo.yml               svgo优化配置文件
+│   │   └── svg                    存放用svgo优化过后的svg图标
+│   ├── main.js
+│   ├── mixins                     全局mixin存放文件夹
+│   │   ├── emitter.js             自定义组件方法
+│   │   └── zv-model.js            用来解决组件封装时v-model双层绑定的问题
+│   ├── mock
+│   │   ├── index.js
+│   │   └── test.js                mock数据模块
+│   ├── router
+│   │   └── index.js               自动加载router下的路由模块
+│   ├── store
+│   │   ├── getters.js
+│   │   ├── index.js
+│   │   └── modules                store模块
+│   ├── utils
+│   │   ├── assist.js              自定义组件方法
+│   │   ├── errorLog.js            全局捕获错误方法
+│   │   ├── index.js               一般工具方法
+│   │   ├── permission.js          全局路由权限控制
+│   │   └── request                封装网络请求
+│   └── views
+│       ├── Home.vue
+│       ├── errorPage              404页面
+│       └── examples               组件示例
+├── vue.config.js                  Vue项目配置文件
+├── .env.mock                      设置mock环境下，所要的全局属性（定义模拟数据）
+├── .env.debugger                  设置debugger环境下，所要的全局属性(用于局域网中调试。若后端是微服务，配合debugger.port.js。)
+├── .env.development               设置development环境下，所要的全局属性（开发环境）
+└── .env.production                设置production环境下，所要的全局属性（生产环境）
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/122687220/document/edit/master/docs/common/directory.md" target="_blank" rel="noopener noreferrer">改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">7/26/2019, 8:44:52 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/document/assets/js/app.11bfe46c.js" defer></script><script src="/document/assets/js/2.9124a432.js" defer></script><script src="/document/assets/js/15.a75e7064.js" defer></script>
+  </body>
+</html>
